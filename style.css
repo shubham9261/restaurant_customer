@@ -1,0 +1,30 @@
+p{
+    color:skyblue;
+    font-size:40px;
+    text-shadow: black 5px 5px 5px;
+    
+ }
+h1{ 
+    text-align: center;
+    color:pink;
+    text-shadow: black 12px 12px 12px;
+    font-size:70px;
+    
+}
+input{
+    color: black;
+    font-size:25px;
+    background: transparent;
+}
+ 
+ input[type='submit']{
+    color: black;
+    font-size:25px;
+     background: transparent;
+}
+ 
+
+
+
+
+
