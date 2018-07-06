@@ -22,8 +22,8 @@
             while ($row=mysqli_fetch_array($result)) {
                 if($_POST["email"]==$row['email'] && $_POST["password"]==$row['password']) {
                     $flag=1;
-                    echo "hello"."  ".$row['name'];
-                    <a href="fetching_restaurant_from_particular_location.php"><button>click</button></a>
+                    //echo "hello"."  ".$row['name'];
+                    <a href="fetching_restaurant_from_particular_location.php"></a>
                     //$_SESSION['name']=$row['name'];
                    // setcookie("name",$row['name']);
                     break;
