@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!doctype html>
 <html>
     <body>
@@ -26,8 +23,9 @@
                 if($_POST["email"]==$row['email'] && $_POST["password"]==$row['password']) {
                     $flag=1;
                     echo "hello"."  ".$row['name'];
-                    $_SESSION['name']=$row['name'];
-                    setcookie("name",$row['name']);
+                    <a href="fetching_restaurant_from_particular_location.php"><button>click</button></a>
+                    //$_SESSION['name']=$row['name'];
+                   // setcookie("name",$row['name']);
                     break;
                 } else {
                     $flag=0;
@@ -36,11 +34,12 @@
 	
             if($flag==0){
                 echo  "Invalid user";
+                <a href="/ugineering/project_login_form.php"><button>click here to enter again </button></a>
             }
 
             mysqli_close($conn);
                 
         ?>
-        <a href="dashboard.php"><button>click</button></a>
+        
     </body>
 </html>
