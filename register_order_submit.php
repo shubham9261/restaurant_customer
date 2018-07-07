@@ -16,6 +16,7 @@
 
     if (mysqli_query($conn, $sql)) {
         	echo "Registration successful";
+            echo '<a href="login_register.php">clickhere</a>';
     } else {
         	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
