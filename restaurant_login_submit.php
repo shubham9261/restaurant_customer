@@ -1,5 +1,4 @@
 <?php
-    session_start(); 
     $hostname = "localhost";
     $username = "root";
     $password = "123456";
@@ -11,10 +10,11 @@
     if (!$conn) {
         	die("Connection failed: " . mysqli_connect_error());
     }
-    $email=$_POST['email'];
+    $email=$_POST['login'];
     $pass=$_POST['password'];
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM PERSON";
     $result = mysqli_query($conn, $sql);
+
 
     if (!$result) {
         die(mysqli_error($conn));
@@ -22,20 +22,19 @@
 
     $flag=0;
     while ($row=mysqli_fetch_array($result)) {
-        if($_POST['email']==$row['email'] && $_POST['password']==$row['password']) {
-            echo "<button type=button>".$_POST["address"]."<img src=\"$_POST[\"image\"]\"/></button>";
-            flag=1;
+        if($_POST['login']==$row['login'] && $_POST['password']==$row['password']) {
+            $flag=1;
+            break;
         }
     }
     
-   /* if($flag==1){
-        echo "hi" . $row['name'];
-        setcookie("id",$row['id']);
-        /*$_SESSION['name']=$row['name'];
+    if($flag==1){
+        echo "login successful";
         echo '<a href="dashboard.php"> click here </a>';
-    }*/
-    if(flag==0){
+    }
+    if($flag==0){
         echo "login failed";
+        echo '<a href="restaurant_login_form.php"> click here back to our login page </a>';
     }
         	
 
