@@ -30,7 +30,7 @@
     
     if($flag==1){
         echo "login successful";
-        echo '<a href="dashboard.php"> click here </a>';
+        echo '<a href="dashboard.php"> click here for choosing your nearest location </a>';
     }
     if($flag==0){
         echo "login failed";
