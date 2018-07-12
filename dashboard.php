@@ -1,4 +1,9 @@
-<!DOCTYPE>
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="dashboard.css"/>
@@ -16,7 +21,7 @@
             if (!$conn) {
         	    die("Connection failed: " . mysqli_connect_error());
             }
-            $sql = "SELECT DISTINCT address,image FROM RESTAURANT";
+            $sql = "SELECT DISTINCT address FROM RESTAURANT";
             $result = mysqli_query($conn, $sql);
 
 
@@ -25,9 +30,11 @@
             }
 
             $flag=0;
+            
             while ($row=mysqli_fetch_array($result)) {
+                
                 ?>
-                    <button type="button"style="border: solid 5px black"><?php echo $row["address"]?> </button> 
+                <a href="fetching_restaurant_from_location.php"><button type="button"style="border: solid 5px black"><?php echo $row['address']?> </button></a> 
                     </br></br></br>
                 <?php
             }    

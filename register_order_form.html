@@ -10,18 +10,23 @@
         <h1>REGISTER TODAY!</h1>
         <form method="post" action="register_order_submit.php">
             <P>Enter Name</p>
-            <input type="text" name="name"placeholder="Enter your name"/> <br/>
+            <input type="text" id="namevalid" name="name"placeholder="Enter your name" /><br/>
+            <h3 id="requirename">...</h5>
             <P>ADDRESS</p>
-            <input type="text" name="address"placeholder="Enter your address"/><br/>
+            <input type="text" name="address"placeholder="Enter your address" id="addvalid"/><br/>
+            <h3 id="requireadd">...</h5>
             <P>Enter Your Email</p>
-            <input type="text" name="login"placeholder="Enter your email"/> <br/>
+            <input type="text" name="login"placeholder="Enter your email" id="emailvalid"/> <br/>
+            <h3 id="requireemail">...</h5>
             <P>PASSWORD</p>
-            <input type="password" name="password"placeholder="maximum 12 characters"maxlength="14"/><br/>
-            
+            <input type="password" name="password"placeholder="maximum 12 characters"maxlength="14" id="passvalid"/><br/>
+            <h3 id="requirepass">...</h5>
             <br/>
             <br/>
-            <input type="submit" name="submit" value="SUBMIT">
+            <input type="submit" name="submit" value="SUBMIT" id="submitin">
   
         </form>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+        <script type="text/javascript" src="ajax.js"></script> 
     </body>
 </html>                                                                             
