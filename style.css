@@ -1,5 +1,5 @@
 p{
-    color:skyblue;
+    color:red;
     font-size:40px;
     text-shadow: black 5px 5px 5px;
     
@@ -20,7 +20,7 @@ input{
  input[type='submit']{
     color: black;
     font-size:25px;
-     background: transparent;
+    background: transparent;
 }
  
 

@@ -11,5 +11,6 @@ CREATE TABLE RESTAURANT (
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     customer_care_contact int not null,
+    image VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
 );

@@ -1,0 +1,23 @@
+button{
+    color: black;
+    font-size:50px;
+    height:150px;
+    width:1260px;
+    background-color:snow;
+    opacity:0.4;
+    border-radius: 100px 75px 100px 75px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  -webkit-appearance: none; 
+}
+button:hover {
+    background-color: green; /* Green */
+    color: white;
+    -webkit-transform: rotateX(40deg);
+     -moz-transform: rotateX(40deg);
+      -ms-transform: rotateX(40deg);
+          transform: rotateX(40deg);
+}
+
